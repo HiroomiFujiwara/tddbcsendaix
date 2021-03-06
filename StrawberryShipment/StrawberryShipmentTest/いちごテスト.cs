@@ -22,6 +22,13 @@ namespace StrawberryShipmentTest
             var strawberry = new Strawberry("あまおう", "S");
             Assert.Equal("あまおう: S", strawberry.ToString());
         }
+
+        [Fact(DisplayName = "品種の種類は「あまおう」が指定できる")]
+        public void DisplayAmaou()
+        {
+            var strawberry = new Strawberry("あまおう", "S");
+            Assert.Equal("あまおう", strawberry.Display());
+        }
     }
 
 }

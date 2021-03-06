@@ -1,15 +1,17 @@
+using System.Collections.Generic;
+
 namespace StrawberryShipment
 {
     /// <summary>
-    /// ‚¢‚¿‚²
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     public class Strawberry
     {
         /// <summary>
-        /// ‚¢‚¿‚²‚ğ¶¬‚·‚éB
+        /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½B
         /// </summary>
-        /// <param name="cultivar">•ií</param>
-        /// <param name="size">ƒTƒCƒY</param>
+        /// <param name="cultivar">ï¿½iï¿½ï¿½</param>
+        /// <param name="size">ï¿½Tï¿½Cï¿½Y</param>
         public Strawberry(string cultivar, string size)
         {
             Cultivar = cultivar;
@@ -17,22 +19,27 @@ namespace StrawberryShipment
         }
 
         /// <summary>
-        /// •ií
+        /// ï¿½iï¿½ï¿½
         /// </summary>
         public string Cultivar { get; }
 
         /// <summary>
-        /// ƒTƒCƒY
+        /// ï¿½Tï¿½Cï¿½Y
         /// </summary>
         public string Size { get; }
 
         /// <summary>
-        /// •¶š—ñ•\Œ»‚ğæ“¾‚·‚éB
+        /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½æ“¾ï¿½ï¿½ï¿½ï¿½B
         /// </summary>
         /// <returns></returns>
         public override string ToString()
         {
             return $"{Cultivar}: {Size}";
+        }
+
+        public IEnumerable<char> Display()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
