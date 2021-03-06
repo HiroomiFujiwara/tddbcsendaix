@@ -23,9 +23,9 @@ namespace StrawberryShipment
         /// <summary>
         /// �T�C�Y
         /// </summary>
-        public string Size { get; }
+        private readonly string Size;
 
-        public Cultivar Cultivar1 => _cultivar;
+        private Cultivar Cultivar => _cultivar;
 
         /// <summary>
         /// ������\�����擾����B
@@ -33,7 +33,7 @@ namespace StrawberryShipment
         /// <returns></returns>
         public override string ToString()
         {
-            return $"{Cultivar1}: {Size}";
+            return $"{Cultivar}: {Size}";
         }
     }
 }
