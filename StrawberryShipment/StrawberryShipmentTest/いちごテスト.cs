@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using StrawberryShipment;
 using Xunit;
 
@@ -17,6 +14,13 @@ namespace StrawberryShipmentTest
             // 結果
             Assert.Equal("あまおう", strawberry.Cultivar);
             Assert.Equal("S", strawberry.Size);
+        }
+
+        [Fact(DisplayName = "いちごの文字列表現が「品種: サイズ」である")]
+        public void StringIsCultivarSize()
+        {
+            var strawberry = new Strawberry("あまおう", "S");
+            Assert.Equal("あまおう: S", strawberry.ToString());
         }
     }
 
