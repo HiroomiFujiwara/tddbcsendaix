@@ -4,8 +4,8 @@ namespace StrawberryShipment
     {
         public Strawberry(string cultivar, string size)
         {
-            Cultivar = "あまおう";
-            Size = "S";
+            Cultivar = cultivar;
+            Size = size;
         }
 
         public string Cultivar { get; }

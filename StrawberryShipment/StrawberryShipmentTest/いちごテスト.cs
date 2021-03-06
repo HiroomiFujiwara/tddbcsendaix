@@ -11,9 +11,8 @@ namespace StrawberryShipmentTest
         [Fact(DisplayName = "品種とサイズを与えて、いちごを作成できる")]
         public void StrawberryCreateTest()
         {
-            // 準備
-            // 実行
-            Strawberry strawberry = new Strawberry("あまおう", "S");
+            // 準備実行
+            var strawberry = new Strawberry("あまおう", "S");
 
             // 結果
             Assert.Equal("あまおう", strawberry.Cultivar);
