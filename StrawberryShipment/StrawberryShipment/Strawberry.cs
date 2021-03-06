@@ -26,6 +26,11 @@ namespace StrawberryShipment
             _size = size;
         }
 
+        public Strawberry(Cultivar cultivar, int weight)
+        {
+            _size = "LL";
+        }
+
         /// <summary>
         /// ������\�����擾����B
         /// </summary>
