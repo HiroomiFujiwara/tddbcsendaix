@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace StrawberryShipment
 {
     /// <summary>
@@ -7,7 +5,15 @@ namespace StrawberryShipment
     /// </summary>
     public class Strawberry
     {
-        private readonly Cultivar _cultivar;
+        /// <summary>
+        /// 品種
+        /// </summary>
+        private Cultivar _cultivar;
+
+        /// <summary>
+        /// �T�C�Y
+        /// </summary>
+        private readonly string _size;
 
         /// <summary>
         /// �������𐶐�����B
@@ -17,15 +23,8 @@ namespace StrawberryShipment
         public Strawberry(Cultivar cultivar, string size)
         {
             _cultivar = cultivar;
-            Size = size;
+            _size = size;
         }
-
-        /// <summary>
-        /// �T�C�Y
-        /// </summary>
-        private readonly string Size;
-
-        private Cultivar Cultivar => _cultivar;
 
         /// <summary>
         /// ������\�����擾����B
@@ -33,7 +32,7 @@ namespace StrawberryShipment
         /// <returns></returns>
         public override string ToString()
         {
-            return $"{Cultivar}: {Size}";
+            return $"{_cultivar}: {_size}";
         }
     }
 }
