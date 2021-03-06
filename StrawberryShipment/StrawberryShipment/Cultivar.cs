@@ -17,6 +17,10 @@ namespace StrawberryShipment
             {
                 case "あまおう":
                     break;
+                case "とちおとめ":
+                    break;
+                case "もういっこ":
+                    break;
 
                 default:
                     throw new ArgumentException();
