@@ -1,3 +1,6 @@
+using System;
+using System.Runtime.InteropServices.ComTypes;
+
 namespace StrawberryShipment
 {
     /// <summary>
@@ -26,15 +29,33 @@ namespace StrawberryShipment
             _size = size;
         }
 
+        /// <summary>
+        /// いちごを生成する。
+        /// </summary>
+        /// <param name="cultivar">品種/param>
+        /// <param name="weight">重さ</param>
         public Strawberry(Cultivar cultivar, int weight)
         {
+            _cultivar = cultivar;
             if (weight >= 25)
             {
                 _size = Size.LL;
             }
-            else if(weight >= 20)
+            else if (weight >= 20)
             {
                 _size = Size.L;
+            }
+            else if (weight >= 10)
+            {
+                _size = Size.M;
+            }
+            else if (weight >= 1)
+            {
+                _size = Size.S;
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException(nameof(weight), weight, "Zero or less than.");
             }
         }
 

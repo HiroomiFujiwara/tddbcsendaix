@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.InteropServices.ComTypes;
 using StrawberryShipment;
 using Xunit;
@@ -30,10 +31,20 @@ namespace StrawberryShipmentTest
         [Theory(DisplayName = "いちごに重さを直接与えてサイズの文字列表現が決まる")]
         [InlineData(25,"あまおう: LL")]
         [InlineData(20,"あまおう: L")]
+        [InlineData(10, "あまおう: M")]
+        [InlineData(1, "あまおう: S")]
         public void StringWeightSize(int weight, string expected)
         {
             var strawberry = new Strawberry(Cultivar.あまおう, weight);
             Assert.Equal(expected, strawberry.ToString());
+        }
+
+
+        [Fact(DisplayName = "1g未満 の重さを与えると、例外となる")]
+        public void ThrowExceptionWhenWeightIsZeroOrLessThan()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => 
+                new Strawberry(Cultivar.あまおう, 0));
         }
     }
 }
