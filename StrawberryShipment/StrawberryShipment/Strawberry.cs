@@ -14,9 +14,9 @@ namespace StrawberryShipment
         /// </summary>
         /// <param name="cultivar">�i��</param>
         /// <param name="size">�T�C�Y</param>
-        public Strawberry(string cultivar, string size)
+        public Strawberry(Cultivar cultivar, string size)
         {
-            _cultivar = new Cultivar(cultivar);
+            _cultivar = cultivar;
             Size = size;
         }
 
@@ -33,7 +33,7 @@ namespace StrawberryShipment
         /// <returns></returns>
         public override string ToString()
         {
-            return $"{Cultivar1.Value}: {Size}";
+            return $"{Cultivar1}: {Size}";
         }
     }
 }
