@@ -27,11 +27,13 @@ namespace StrawberryShipmentTest
             Assert.Equal($"あまおう: {expected}",strawberry.ToString());
         }
 
-        [Fact(DisplayName = "25g以上 の重さを与えると、サイズがLLである")]
-        public void StirngWeightSize()
+        [Theory(DisplayName = "いちごに重さを直接与えてサイズの文字列表現が決まる")]
+        [InlineData(25,"あまおう: LL")]
+        [InlineData(20,"あまおう: L")]
+        public void StringWeightSize(int weight, string expected)
         {
-            var strawberry = new Strawberry(Cultivar.あまおう, 25);
-            Assert.Equal("あまおう: LL", strawberry.ToString());
+            var strawberry = new Strawberry(Cultivar.あまおう, weight);
+            Assert.Equal(expected, strawberry.ToString());
         }
     }
 }

@@ -32,6 +32,10 @@ namespace StrawberryShipment
             {
                 _size = Size.LL;
             }
+            else if(weight >= 20)
+            {
+                _size = Size.L;
+            }
         }
 
         /// <summary>
