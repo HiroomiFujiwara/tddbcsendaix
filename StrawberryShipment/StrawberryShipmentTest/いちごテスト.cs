@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using StrawberryShipment;
 using Xunit;
 
 namespace StrawberryShipmentTest
@@ -20,15 +21,4 @@ namespace StrawberryShipmentTest
         }
     }
 
-    public class Strawberry
-    {
-        public Strawberry(string cultivar, string size)
-        {
-            Cultivar = "あまおう";
-            Size = "S";
-        }
-
-        public string Cultivar { get; }
-        public string Size { get; }
-    }
 }
