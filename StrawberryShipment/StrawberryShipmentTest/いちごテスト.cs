@@ -25,5 +25,10 @@ namespace StrawberryShipmentTest
             var strawberry = new Strawberry(Cultivar.あまおう, expected);
             Assert.Equal($"あまおう: {expected}",strawberry.ToString());
         }
+
+        [Fact(DisplayName = "25g以上 の重さを与えると、サイズがLLである")]
+        public void StirngWeightSize()
+        {
+        }
     }
 }
