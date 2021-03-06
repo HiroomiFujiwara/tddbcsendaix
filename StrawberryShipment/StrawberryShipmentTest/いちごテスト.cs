@@ -14,5 +14,16 @@ namespace StrawberryShipmentTest
             var strawberry = new Strawberry(cultivar, "S");
             Assert.Equal(expected, strawberry.ToString());
         }
+
+        [Theory(DisplayName = "サイズの種類は「S」「M」「L」「LL」が指定できる")]
+        [InlineData("S")]
+        [InlineData("M")]
+        [InlineData("L")]
+        [InlineData("LL")]
+        public void StringSize(string expected)
+        {
+            var strawberry = new Strawberry(Cultivar.あまおう, expected);
+            Assert.Equal($"あまおう: {expected}",strawberry.ToString());
+        }
     }
 }
