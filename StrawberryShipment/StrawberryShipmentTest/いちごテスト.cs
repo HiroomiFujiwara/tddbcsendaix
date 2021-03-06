@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices.ComTypes;
 using StrawberryShipment;
 using Xunit;
 
@@ -11,16 +12,16 @@ namespace StrawberryShipmentTest
         [InlineData(Cultivar.もういっこ, "もういっこ: S")]
         public void StringIsCultivarSize(Cultivar cultivar, string expected)
         {
-            var strawberry = new Strawberry(cultivar, "S");
+            var strawberry = new Strawberry(cultivar, Size.S);
             Assert.Equal(expected, strawberry.ToString());
         }
 
         [Theory(DisplayName = "サイズの種類は「S」「M」「L」「LL」が指定できる")]
-        [InlineData("S")]
-        [InlineData("M")]
-        [InlineData("L")]
-        [InlineData("LL")]
-        public void StringSize(string expected)
+        [InlineData(Size.S)]
+        [InlineData(Size.M)]
+        [InlineData(Size.L)]
+        [InlineData(Size.LL)]
+        public void StringSize(Size expected)
         {
             var strawberry = new Strawberry(Cultivar.あまおう, expected);
             Assert.Equal($"あまおう: {expected}",strawberry.ToString());

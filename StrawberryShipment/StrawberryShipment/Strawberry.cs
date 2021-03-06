@@ -13,14 +13,14 @@ namespace StrawberryShipment
         /// <summary>
         /// �T�C�Y
         /// </summary>
-        private readonly string _size;
+        private readonly Size _size;
 
         /// <summary>
         /// �������𐶐�����B
         /// </summary>
         /// <param name="cultivar">�i��</param>
         /// <param name="size">�T�C�Y</param>
-        public Strawberry(Cultivar cultivar, string size)
+        public Strawberry(Cultivar cultivar, Size size)
         {
             _cultivar = cultivar;
             _size = size;
@@ -30,7 +30,7 @@ namespace StrawberryShipment
         {
             if (weight >= 25)
             {
-                _size = "LL";
+                _size = Size.LL;
             }
         }
 
