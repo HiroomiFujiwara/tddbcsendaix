@@ -12,7 +12,7 @@ namespace StrawberryShipmentTest
             var strawberry = new Strawberry("あまおう", "S");
 
             // 結果
-            Assert.Equal("あまおう", strawberry.Cultivar);
+            Assert.Equal("あまおう", strawberry.Cultivar1.Value);
             Assert.Equal("S", strawberry.Size);
         }
 
@@ -27,7 +27,7 @@ namespace StrawberryShipmentTest
         public void DisplayAmaou()
         {
             var strawberry = new Strawberry("あまおう", "S");
-            Assert.Equal("あまおう", strawberry.Display());
+            Assert.Equal("あまおう", strawberry.Cultivar1.Value);
         }
     }
 

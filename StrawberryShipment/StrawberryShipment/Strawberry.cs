@@ -7,6 +7,8 @@ namespace StrawberryShipment
     /// </summary>
     public class Strawberry
     {
+        private readonly Cultivar _cultivar;
+
         /// <summary>
         /// �������𐶐�����B
         /// </summary>
@@ -14,19 +16,16 @@ namespace StrawberryShipment
         /// <param name="size">�T�C�Y</param>
         public Strawberry(string cultivar, string size)
         {
-            Cultivar = cultivar;
+            _cultivar = new Cultivar(cultivar);
             Size = size;
         }
-
-        /// <summary>
-        /// �i��
-        /// </summary>
-        public string Cultivar { get; }
 
         /// <summary>
         /// �T�C�Y
         /// </summary>
         public string Size { get; }
+
+        public Cultivar Cultivar1 => _cultivar;
 
         /// <summary>
         /// ������\�����擾����B
@@ -34,12 +33,7 @@ namespace StrawberryShipment
         /// <returns></returns>
         public override string ToString()
         {
-            return $"{Cultivar}: {Size}";
-        }
-
-        public IEnumerable<char> Display()
-        {
-            throw new System.NotImplementedException();
+            return $"{Cultivar1.Value}: {Size}";
         }
     }
 }
