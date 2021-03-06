@@ -28,7 +28,10 @@ namespace StrawberryShipment
 
         public Strawberry(Cultivar cultivar, int weight)
         {
-            _size = "LL";
+            if (weight >= 25)
+            {
+                _size = "LL";
+            }
         }
 
         /// <summary>
